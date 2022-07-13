@@ -1,0 +1,281 @@
+header{
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    color: white;
+    background-color:blue;
+    width: 100%;
+    height: 50px;
+}
+body{
+    flex-wrap: wrap;
+}
+.container-fluid{
+    background-color: aqua;
+    
+}
+.Pagina{
+    background-color: lightblue;
+}
+.nav-item:hover{
+    background-color: aquamarine;
+    border: solid beige;
+}
+.btn{
+    background: white;
+}
+.titulo{
+    font-family: cursive;
+    text-align: center;
+}
+.container{
+    display: flex;
+}
+.texto{
+    padding: 30px;
+    margin: 30px;
+}
+.azul{
+    color: blue;
+}
+.parrafo2{
+    padding: 20px;
+    background-color: darkturquoise;
+    border-radius: 6px;
+    margin: 10px;
+    border: 3px solid darkturquoise;
+    text-align: center;
+}
+.dos{
+    text-align: justify;
+}
+.parrafo3{
+    padding: 20px;
+    background-color: darkturquoise;
+    border-radius: 6px;
+    margin: 10px;
+    border: 3px solid darkturquoise;
+    text-align: center;
+}
+.parrafo5{
+    padding: 20px;
+    background-color: darkturquoise;
+    border-radius: 6px;
+    margin: 10px;
+    border: 3px solid darkturquoise;
+    text-align: start;
+}
+.parrafo6{
+    padding: 20px;
+    background-color: darkturquoise;
+    border-radius: 6px;
+    margin: 10px;
+    border: 3px solid darkturquoise;
+    text-align: start;
+}
+.Parrafo4{
+    text-align: justify;
+}
+.imagen1{
+    width: 200px;
+}
+.Imagen2{
+    padding: 4px;
+    margin: 6px;
+}
+.Principal2{
+    background-color: darkturquoise;
+    margin: 10px;
+    text-align: center;
+}
+/*UBICACIÓN DEL COLEGIO*/
+.ubicacion{
+    font-family: cursive;
+    padding: 6px;
+}
+/*Página de NOSOTROS*/
+.principal2{
+    border: 4px solid green;
+    border-radius: 10px;
+}
+.principal2 >* {
+    border: 4px solid purple;
+    padding: 8px;
+    margin:  10px;
+    border-radius: 10px;
+    width: 45%;
+    height: 500px;
+    flex-wrap: wrap;
+}
+.principal2{
+    display: flex;
+    justify-content: space-between;
+}
+.cuadro1{
+    width: 70%;
+    text-align: justify;
+    height: 200px;
+    
+}
+.cuadro2{
+    width: 30%;
+    border: 4px solid palevioletred;
+    color: white;
+    text-align: center;
+    background-color: dimgray;
+    height: 200px;
+}
+/*NIVELES QUE OFRECE EL COLEGIO*/
+.principal3{
+    border: white;
+}
+.principal3 >* {
+    border: 4px solid purple;
+    padding: 8px;
+    margin:  10px;
+    width: 45%;
+    height: 900px;
+}
+.principal3{
+    display: flex;
+    justify-content: space-between;
+}
+.cuadro3{
+    width: 50%;
+    text-align: justify;
+    height: 600px;
+    
+}
+.col-12{
+    width: 100%;
+    height: 100px;
+}
+.cuadro4{
+    width: 50%;
+    border: 4px solid palevioletred;
+    color: white;
+    text-align: start;
+    background-color: dimgray;
+    height: 600px;
+}
+/*UTILIZACIÓN DE FORMA RESPONSIVA*/
+.tabla1{
+    background-color: gold;
+    padding: 8px;
+    margin: 25px;
+    width: 50%;
+}
+.uno{
+    margin: 5px;
+}
+.Formulario3{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.Formulario6{
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*PAGINA 01*/
+@media (min-width:600px){
+
+#parrafo5{
+          width: 100%;        
+        }
+#parrafo6{
+          width: 100%;        
+        }
+}
+.uno{
+    color: blue;
+}
+.dos{
+    color: black;
+}
+@media (min-width: 601px) and (max-width:1200px){  
+#parrafo5{
+        width: 50%;
+        float: left;       
+        }
+#parrafo6{
+        width: 50%;       
+        float: left;        
+        }
+}
+@media  (min-width:1201px){
+
+#parrafo5{
+        width: 50%;
+        float: left;
+        }
+#parrafo6{
+        width: 50%;
+        float: left;
+        }
+
+}
+    
+    
+/*FORMULARIO*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background-color: bisque;
+
+}
+.form{
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 1em;
+    padding: 20px;
+    
+}
+.form_container{
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+.form_title{
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: .4em;
+}
+.form_input{
+    font-family: inherit;
+    font-size: 1rem;
+    padding: .8em 1em;
+    outline: none;
+    border: none;
+    border: 1px solid #bbb0b0;
+    border-radius: 0.2em;
+}
+.form_input--mesaje{
+    resize: none;
+    padding: 1.8em 1em;
+    margin: .5em;
+}
+.form_cta{
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #089FE0;
+    color: #fff;
+    border: none;
+    font-weight: 300;
+    padding: .7em 0;
+    border-radius: .2em;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+@media (max-width:450px){
+    .form{
+        padding: 3.5em 1.em;
+    }
+}
+

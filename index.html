@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+  <link rel="stylesheet" href="css/estilos.css">
+</html>
+<body>
+      <header class="col-12 ">
+        <div>
+         <h4>Bienvenido a la Familia Pauletina</h4>
+        </div>
+        <div>
+         <h4>Central Telefónico: 430-0505</h4>
+        </div>         
+     </header>
+
+            <div class="container">
+           <div class="row">
+          <nav>
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <h1 class="titulo"> Colegio PEDRO PAULET MOSTAJO</h1>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="Pagina01.html">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="Pagina2.html">INSCRIPCION</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="Pagina3.html">CONTACTO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" >
+                        PERSONAL
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="Pagina4.html">REGISTRO DE NOTAS</a></li>
+                        <li><a class="dropdown-item" href="index.html">CALCULADORA ESCOLAR</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </div>
+              </div>
+            </nav>
+          </nav>
+          <h5>Calculadora escolar</h5>
+          <p>En esta sección podrá visualizar una calculadora el cual le será de mucha ayuda en los diferentes cálculos que ustedes deseen realizar, espero que les resulte genial.</p>
+           
+          <script type="text/javascript">
+          var numpantalla = "0";
+          var pantallaconnumero="si" //Si o No
+          var usarpunto="no" // Si o No
+          var numespera=0;
+          var operapendiente="";
+          var solucion="";
+
+          function ingresarnumero(x)
+          {
+          if(x!==".")
+          {
+
+              if(numpantalla=="0" || pantallaconnumero== "si" )
+                  {
+                      document.calculadora.txtboxnros.value=x;
+                      numpantalla=x;
+                  }
+              else if(x!=".")
+                  {
+                      document.calculadora.txtboxnros.value+=x;
+                      numpantalla+=x;
+                  }
+          }
+          if(x=="." && usarpunto=="no" && numpantalla=="0")
+              {
+                  document.calculadora.txtboxnros.value="0.";
+                  numpantalla=x;
+                  usarpunto="si";
+              }
+          else if(x=="." && usarpunto=="no")
+              {
+                  document.calculadora.txtboxnros.value="0.";
+                  numpantalla+=x;
+                  usarpunto="si"
+              }
+          else if(x=="." && usarpunto=="si")
+          {
+
+          }
+              pantallaconnumero="no;"
+          }
+
+          function ingresaroperacion(y)
+          {
+
+          if(operapendiente == "")
+          {
+          numespera=document.calculadora.txtboxnros.value;
+          document.calculadora.txtboxnros.value +=y;
+          operapendiente = y;
+          pantallaconnumero = "si"
+          numpantalla = "";
+          usarpunto = "no"
+
+          }
+
+          }
+
+          function resultado()
+          {
+
+          if(operapendiente != "")
+          {
+          solucion=numespera+operapendiente+numpantalla;
+          document.calculadora.txtboxnros.value=eval(solucion);
+          numpantalla=eval (solucion);
+          pantallaconnumero="si";
+          operapendiente = "";
+          usarpunto = "no";
+
+          }
+
+          }
+
+          function raiz()
+          {
+          if(operapendiente == "")
+          {
+          document.calculadora.txtboxnros.value=Math.sqrt(numpantalla);
+          pantallaconnumero == "si";
+          operapendiente = "";
+          usarpunto = "no";
+          }
+          }
+
+          function limpiar()
+          {
+           numpantalla = "0";
+           pantallaconnumero="si"
+           usarpunto="no" 
+           numespera=0;
+           operapendiente="";
+           solucion="";
+           document.calculadora.txtboxnros.value="0";
+          }
+
+          </script>
+          <center>
+             <style>
+
+              input[type=button]
+              {
+                background-color: white;
+                border: none;
+                color: black;
+                font-weight: bold;
+                padding: 6px 20px;
+                text-align: center;
+                text-decoration: none;
+                font-display: inline-block;
+                font-size: 20px;
+                margin: 4px;
+                cursor: pointer;
+                box-shadow: 3px 3px 3px black;
+              }
+              input[type="text"]
+              {
+                border: solid;
+                color: black;
+                padding: 15px 32;
+                text-align: right;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                width: 95%;
+                box-shadow: 3px 3px 3px black;
+              }
+              table{
+                background-color: #E4E7EA;
+                padding: 5px 5px;
+              }
+             </style>
+            <form name="calculadora">
+
+              <table border="3">
+
+              <tr>
+              <td colspan="5">
+              <input type="text" name="txtboxnros" value="0" disabled>
+              </td></tr>
+              
+              <tr>
+              <td><input type="button" value="1" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="2" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="3" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="+" onclick="ingresaroperacion(this.value)"></td>
+              <td><input type="button" value="-" onclick="ingresaroperacion(this.value)"></td>
+              </tr>
+              <tr>
+              <td><input type="button" value="4" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="5" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="6" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="*" onclick="ingresaroperacion(this.value)"></td>
+              <td><input type="button" value="/" onclick="ingresaroperacion(this.value)"></td>
+              </tr>
+              <tr>
+              <td><input type="button" value="7" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="8" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="9" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="^" onclick="ingresaroperacion('**')"></td>
+              <td><input type="button" value="√" onclick="raiz()"></td>
+              </tr>
+              <tr>
+              <td><input type="button" value="0" onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="." onclick="ingresarnumero(this.value)"></td>
+              <td><input type="button" value="c" onclick="limpiar()"></td>
+              <td colspan="2"><input type="button" value="   =   " onclick="resultado()"></td>
+              </tr>
+            </form>
+            </table>
+          </center>
+
+          
+     
+</body>
+</html>
+</body>
+</html>
